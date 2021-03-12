@@ -30,9 +30,24 @@ export const Strong = styled.strong`
 
 export const Title = styled.h1`
   margin: 20px 0 40px;
-
-  color: #181818;
+  background: #ebeff0;
+  color: lightskyblue;
   font-size: 2.3rem;
-  text-align: center;
   font-weight: bolder;
+
+  text-shadow: -1px 2px 2px #fff;
+`;
+
+export const FooterTitle = styled(Title)`
+  background: transparent;
+  color: lightskyblue;
+
+  font-size: 1.25rem;
+  text-align: right;
+
+  &:hover {
+    color: black;
+    text-shadow: 0 0 1px #fff;
+    cursor: pointer;
+  }
 `;
