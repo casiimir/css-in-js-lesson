@@ -1,26 +1,8 @@
 import { useEffect, useState } from 'react';
-import { Item, Img, Strong, Title, FooterTitle } from './Item';
-import styled from 'styled-components';
+import { FooterTitle } from './Item';
+import CardList from './CardList';
 
 import Header from './Header';
-
-function repeatTimes(list, numTimes) {
-  const value = [];
-  for (let times = 0; times <= numTimes; times = times + 1) {
-    for (let el of list) {
-      value.push(el);
-    }
-  }
-  return value.sort(() => 0.5 - Math.random());
-}
-
-const CardList = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-
-  margin: 50px 0 0;
-`;
 
 const App = function App() {
   const [heroes, setHeros] = useState([]);
@@ -34,20 +16,7 @@ const App = function App() {
   return (
     <>
       <Header />
-      <CardList>
-        <Title>The solution for every developer</Title>
-        {heroes &&
-          repeatTimes(heroes, 5).map((hero) => (
-            <Item
-              name={hero.name}
-              img={hero.img}
-              key={hero.img + Math.random()}
-            >
-              <Img src={hero.img} alt={hero.name} />
-              <Strong>{hero.name}</Strong>
-            </Item>
-          ))}
-      </CardList>
+      <CardList heroes={heroes} />
       <FooterTitle>Stay hungry, stay foolish</FooterTitle>
     </>
   );

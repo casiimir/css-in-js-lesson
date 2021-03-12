@@ -12,6 +12,7 @@ export const Item = styled.div`
   padding: 12.5px 5px;
 
   background: #e0ffeb99;
+  background: ${(props) => props.name.includes('i') && 'ghostwhite'};
 
   :nth-child(even) {
     background: #e0f4ff75;
