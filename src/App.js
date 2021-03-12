@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import { Item, Img, Strong, Title, FooterTitle } from './Item';
 import styled from 'styled-components';
 
+import Header from './Header';
+
 function repeatTimes(list, numTimes) {
   const value = [];
   for (let times = 0; times <= numTimes; times = times + 1) {
@@ -16,6 +18,8 @@ const CardList = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+
+  margin: 50px 0 0;
 `;
 
 const App = function App() {
@@ -29,8 +33,9 @@ const App = function App() {
 
   return (
     <>
-      <Title>The solution for every developer</Title>
+      <Header />
       <CardList>
+        <Title>The solution for every developer</Title>
         {heroes &&
           repeatTimes(heroes, 5).map((hero) => (
             <Item

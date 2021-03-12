@@ -4,46 +4,51 @@ export const Item = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 
   width: 120px;
   height: 150px;
   margin: 2.5px;
-  padding: 2.5px 5px;
+  padding: 12.5px 5px;
 
-  background: #ebeff0;
+  background: #e0ffeb99;
+
+  :nth-child(even) {
+    background: #e0f4ff75;
+  }
 `;
 
 export const Img = styled.img`
-  width: 50%;
+  width: 70px;
 `;
 
 export const Strong = styled.strong`
-  margin-top: 15px;
+  padding: 0 10px;
 
   color: #181818;
-  font-size: 1rem;
-  text-decoration: underline;
+  font-size: 0.9rem;
+  font-family: 'Sen';
 
+  text-align: center;
+  text-shadow: 1px 1px 2px #18181825;
   cursor: pointer;
 `;
 
 export const Title = styled.h1`
+  width: 400px;
   margin: 20px 0 40px;
-  background: #ebeff0;
-  color: lightskyblue;
-  font-size: 2.3rem;
-  font-weight: bolder;
+  color: #181818;
 
-  text-shadow: -1px 2px 2px #fff;
+  font-size: 1.6rem;
+  font-weight: bolder;
+  font-family: 'Cormorant';
+  text-transform: uppercase;
 `;
 
 export const FooterTitle = styled(Title)`
   background: transparent;
-  color: lightskyblue;
-
+  color: #18181840;
   font-size: 1.25rem;
-  text-align: right;
 
   &:hover {
     color: black;
